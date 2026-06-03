@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>WanderVibe | Hotels · Flights · Deals · Destinations</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;400;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+  <div class="container header-flex">
+    <div class="logo" id="logoHome">
+      <i class="fas fa-plane-departure"></i> WanderVibe
+    </div>
+    <div class="nav-links">
+      <a class="nav-link active" data-page="home">Home</a>
+      <a class="nav-link" data-page="deals">Deals</a>
+      <a class="nav-link" data-page="destinations">Destinations</a>
+      <a class="nav-link" data-page="contact">Contact</a>
+    </div>
+  </div>
+</header>
+
+<!-- HOME PAGE -->
+<div id="homePage" class="page active-page">
+  <section class="hero">
+    <div class="container">
+      <div class="hero-content">
+        <h1>Escape. Explore. Experience</h1>
+        <p>Curated selection — book your perfect escape</p>
+      </div>
+      <div class="search-card">
+        <div class="toggle-mode">
+          <button id="hotelModeBtn" class="mode-btn active"><i class="fas fa-hotel"></i> Hotels</button>
+          <button id="flightModeBtn" class="mode-btn"><i class="fas fa-plane"></i> Flights</button>
+        </div>
+        <div id="hotelFields" class="hotel-fields">
+          <div class="form-grid">
+            <div class="input-group"><label><i class="fas fa-location-dot"></i> Destination</label><input type="text" id="hotelDest" placeholder="City, resort, area" value="New York"></div>
+            <div class="input-group"><label>Check-in</label><input type="date" id="checkinDate"></div>
+            <div class="input-group"><label>Check-out</label><input type="date" id="checkoutDate"></div>
+            <div class="input-group"><label>Guests</label><input type="number" id="guestsCount" min="1" value="2"></div>
+            <div class="input-group"><button id="searchBtn" class="search-btn"><i class="fas fa-search"></i> Search Hotels</button></div>
+          </div>
+        </div>
+        <div id="flightFields" class="flight-fields" style="display: none;">
+          <div class="form-grid">
+            <div class="input-group"><label><i class="fas fa-plane-up"></i> From</label><input type="text" id="flightFrom" placeholder="Departure city" value="New York"></div>
+            <div class="input-group"><label><i class="fas fa-plane-down"></i> To</label><input type="text" id="flightTo" placeholder="Arrival city" value="Los Angeles"></div>
+            <div class="input-group"><label>Departure</label><input type="date" id="departDate"></div>
+            <div class="input-group"><label>Return</label><input type="date" id="returnDate"></div>
+            <div class="input-group"><label>Passengers</label><input type="number" id="passengersCount" min="1" value="1"></div>
+            <div class="input-group"><button id="flightSearchBtn" class="search-btn"><i class="fas fa-search"></i> Search Flights</button></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <main class="container">
+    <div class="section-title" id="resultsTitle">🏨 5 amazing hotels</div>
+    <div id="resultsContainer" class="results-grid"></div>
+  </main>
+</div>
+
+<!-- DEALS PAGE -->
+<div id="dealsPage" class="page">
+  <div class="container">
+    <div class="section-title">🔥 Limited Time Offers</div>
+    <div class="results-grid" id="dealsContainer"></div>
+  </div>
+</div>
+
+<!-- DESTINATIONS PAGE -->
+<div id="destinationsPage" class="page">
+  <div class="container">
+    <div class="section-title">🌍 Trending Destinations</div>
+    <div class="destinations-grid" id="destinationsContainer"></div>
+  </div>
+</div>
+
+<!-- CONTACT PAGE -->
+<div id="contactPage" class="page">
+  <div class="container">
+    <div class="section-title">📬 Let's talk</div>
+    <div class="contact-grid">
+      <div class="contact-info">
+        <i class="fas fa-map-marker-alt"></i>
+        <h3>Visit Us</h3>
+        <p>123 Wanderlust Avenue<br>NY 10001, New York</p>
+        <br>
+        <i class="fas fa-phone-alt"></i>
+        <h3>Call Us</h3>
+        <p>+1 (800) 234-5678</p>
+        <br>
+        <i class="fas fa-envelope"></i>
+        <h3>Email</h3>
+        <p>hello@wandervibe.com</p>
+      </div>
+      <div class="contact-info contact-form">
+        <h3>Send us a message</h3>
+        <input type="text" id="contactName" placeholder="Your name">
+        <input type="email" id="contactEmail" placeholder="Email address">
+        <textarea rows="4" id="contactMsg" placeholder="How can we help?"></textarea>
+        <button class="contact-btn" id="sendContactBtn"><i class="fas fa-paper-plane"></i> Send Message</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<footer>
+  <div class="container">
+    <p><i class="fas fa-globe-americas"></i> WanderVibe — 5 hotels · 5 flights edition</p>
+    <p style="margin-top: 12px; font-size: 13px;">© 2025 | Demo booking | Your adventure starts here</p>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
