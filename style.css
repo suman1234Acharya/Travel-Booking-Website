@@ -326,7 +326,7 @@ footer {
   gap: 30px;
   margin: 40px 0;
 }
-@media (max-width: 760px) {
+@media (max-width: 750px) {
   .hero-content h1 { font-size: 32px; }
   .search-card { padding: 20px; }
   .contact-grid { grid-template-columns: 1fr; }
